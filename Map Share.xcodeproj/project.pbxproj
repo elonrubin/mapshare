@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3132413135013464C73FD476 /* Pods_Map_Share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFE5084A0ED39F7813FDC5A /* Pods_Map_Share.framework */; };
+		EF9E7BBE1DEF68EC00207A79 /* ShareInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7BBD1DEF68EC00207A79 /* ShareInfoViewController.swift */; };
+		EF9E7BC01DEF690800207A79 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9E7BBF1DEF690800207A79 /* MapKit.framework */; };
+		EF9E7BC41DEFA85700207A79 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7BC31DEFA85700207A79 /* MapViewController.swift */; };
 		EFA0E4441DEF5BE400488A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0E4431DEF5BE400488A44 /* AppDelegate.swift */; };
 		EFA0E4461DEF5BE400488A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA0E4451DEF5BE400488A44 /* ViewController.swift */; };
 		EFA0E4491DEF5BE400488A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA0E4471DEF5BE400488A44 /* Main.storyboard */; };
 		EFA0E44C1DEF5BE400488A44 /* Map_Share.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFA0E44A1DEF5BE400488A44 /* Map_Share.xcdatamodeld */; };
 		EFA0E44E1DEF5BE400488A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA0E44D1DEF5BE400488A44 /* Assets.xcassets */; };
 		EFA0E4511DEF5BE400488A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA0E44F1DEF5BE400488A44 /* LaunchScreen.storyboard */; };
+		EFF61BBF1DF05927008070B9 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF61BBE1DF05927008070B9 /* Share.swift */; };
+		EFF61BC11DF05AB3008070B9 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF61BC01DF05AB3008070B9 /* Functions.swift */; };
+		EFF61BC51DF06C27008070B9 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF61BC41DF06C27008070B9 /* ContactViewController.swift */; };
+		EFF61BC71DF06D1A008070B9 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF61BC61DF06D1A008070B9 /* Contacts.framework */; };
+		EFF61BC91DF06D23008070B9 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF61BC81DF06D23008070B9 /* ContactsUI.framework */; };
+		EFF61BD11DF0D0F7008070B9 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF61BD01DF0D0F7008070B9 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ACD76D14B4277BC67134345 /* Pods-Map Share.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map Share.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Map Share/Pods-Map Share.debug.xcconfig"; sourceTree = "<group>"; };
+		B16002213BCDF188731B6853 /* Pods-Map Share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map Share.release.xcconfig"; path = "Pods/Target Support Files/Pods-Map Share/Pods-Map Share.release.xcconfig"; sourceTree = "<group>"; };
+		BEFE5084A0ED39F7813FDC5A /* Pods_Map_Share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Map_Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5A1FD01DF1C5020022D95C /* DepreciatedContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepreciatedContactViewController.swift; sourceTree = "<group>"; };
+		EF9E7BBD1DEF68EC00207A79 /* ShareInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareInfoViewController.swift; sourceTree = "<group>"; };
+		EF9E7BBF1DEF690800207A79 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EF9E7BC31DEFA85700207A79 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EFA0E4401DEF5BE400488A44 /* Map Share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA0E4431DEF5BE400488A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA0E4451DEF5BE400488A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +41,12 @@
 		EFA0E44D1DEF5BE400488A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA0E4501DEF5BE400488A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFA0E4521DEF5BE400488A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF61BBE1DF05927008070B9 /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		EFF61BC01DF05AB3008070B9 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		EFF61BC41DF06C27008070B9 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		EFF61BC61DF06D1A008070B9 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		EFF61BC81DF06D23008070B9 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		EFF61BD01DF0D0F7008070B9 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +54,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF61BC91DF06D23008070B9 /* ContactsUI.framework in Frameworks */,
+				EFF61BC71DF06D1A008070B9 /* Contacts.framework in Frameworks */,
+				EF9E7BC01DEF690800207A79 /* MapKit.framework in Frameworks */,
+				3132413135013464C73FD476 /* Pods_Map_Share.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		504BFD970CDC7758CFED4345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFF61BC81DF06D23008070B9 /* ContactsUI.framework */,
+				EFF61BC61DF06D1A008070B9 /* Contacts.framework */,
+				EF9E7BBF1DEF690800207A79 /* MapKit.framework */,
+				BEFE5084A0ED39F7813FDC5A /* Pods_Map_Share.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A260391F13B4A89F7D90D070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ACD76D14B4277BC67134345 /* Pods-Map Share.debug.xcconfig */,
+				B16002213BCDF188731B6853 /* Pods-Map Share.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF5A1FD21DF1D6090022D95C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFA0E4471DEF5BE400488A44 /* Main.storyboard */,
+				EFA0E44F1DEF5BE400488A44 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EF5A1FD31DF1D7440022D95C /* Depreciated */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A1FD01DF1C5020022D95C /* DepreciatedContactViewController.swift */,
+			);
+			name = Depreciated;
+			sourceTree = "<group>";
+		};
 		EFA0E4371DEF5BE300488A44 = {
 			isa = PBXGroup;
 			children = (
 				EFA0E4421DEF5BE400488A44 /* Map Share */,
 				EFA0E4411DEF5BE400488A44 /* Products */,
+				A260391F13B4A89F7D90D070 /* Pods */,
+				504BFD970CDC7758CFED4345 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +122,37 @@
 		EFA0E4421DEF5BE400488A44 /* Map Share */ = {
 			isa = PBXGroup;
 			children = (
+				EFF61BC21DF05B80008070B9 /* Model */,
 				EFA0E4431DEF5BE400488A44 /* AppDelegate.swift */,
-				EFA0E4451DEF5BE400488A44 /* ViewController.swift */,
-				EFA0E4471DEF5BE400488A44 /* Main.storyboard */,
+				EF5A1FD21DF1D6090022D95C /* View */,
+				EFF61BC31DF05B96008070B9 /* Controller */,
 				EFA0E44D1DEF5BE400488A44 /* Assets.xcassets */,
-				EFA0E44F1DEF5BE400488A44 /* LaunchScreen.storyboard */,
 				EFA0E4521DEF5BE400488A44 /* Info.plist */,
 				EFA0E44A1DEF5BE400488A44 /* Map_Share.xcdatamodeld */,
+				EF5A1FD31DF1D7440022D95C /* Depreciated */,
 			);
 			path = "Map Share";
+			sourceTree = "<group>";
+		};
+		EFF61BC21DF05B80008070B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFF61BBE1DF05927008070B9 /* Share.swift */,
+				EFF61BC01DF05AB3008070B9 /* Functions.swift */,
+				EFF61BD01DF0D0F7008070B9 /* Place.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EFF61BC31DF05B96008070B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFA0E4451DEF5BE400488A44 /* ViewController.swift */,
+				EF9E7BBD1DEF68EC00207A79 /* ShareInfoViewController.swift */,
+				EFF61BC41DF06C27008070B9 /* ContactViewController.swift */,
+				EF9E7BC31DEFA85700207A79 /* MapViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFA0E4551DEF5BE400488A44 /* Build configuration list for PBXNativeTarget "Map Share" */;
 			buildPhases = (
+				84E924ABACFCB15B505FB45F /* [CP] Check Pods Manifest.lock */,
 				EFA0E43C1DEF5BE400488A44 /* Sources */,
 				EFA0E43D1DEF5BE400488A44 /* Frameworks */,
 				EFA0E43E1DEF5BE400488A44 /* Resources */,
+				F2F4F541F23467BE643417CC /* [CP] Embed Pods Frameworks */,
+				0FFAC31B041ACE5E0C1DCFA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,8 +190,13 @@
 				TargetAttributes = {
 					EFA0E43F1DEF5BE400488A44 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = K8NRUJWVV9;
+						DevelopmentTeam = U7QG5FXY5E;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,14 +231,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FFAC31B041ACE5E0C1DCFA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Map Share/Pods-Map Share-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84E924ABACFCB15B505FB45F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2F4F541F23467BE643417CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Map Share/Pods-Map Share-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFA0E43C1DEF5BE400488A44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EFA0E4461DEF5BE400488A44 /* ViewController.swift in Sources */,
+				EF9E7BC41DEFA85700207A79 /* MapViewController.swift in Sources */,
+				EFF61BD11DF0D0F7008070B9 /* Place.swift in Sources */,
 				EFA0E4441DEF5BE400488A44 /* AppDelegate.swift in Sources */,
+				EFF61BC11DF05AB3008070B9 /* Functions.swift in Sources */,
+				EF9E7BBE1DEF68EC00207A79 /* ShareInfoViewController.swift in Sources */,
+				EFF61BC51DF06C27008070B9 /* ContactViewController.swift in Sources */,
 				EFA0E44C1DEF5BE400488A44 /* Map_Share.xcdatamodeld in Sources */,
+				EFF61BBF1DF05927008070B9 /* Share.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -261,12 +411,14 @@
 		};
 		EFA0E4561DEF5BE400488A44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ACD76D14B4277BC67134345 /* Pods-Map Share.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K8NRUJWVV9;
+				DEVELOPMENT_TEAM = U7QG5FXY5E;
 				INFOPLIST_FILE = "Map Share/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bsi.Map-Share";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Map-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,12 +426,14 @@
 		};
 		EFA0E4571DEF5BE400488A44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B16002213BCDF188731B6853 /* Pods-Map Share.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K8NRUJWVV9;
+				DEVELOPMENT_TEAM = U7QG5FXY5E;
 				INFOPLIST_FILE = "Map Share/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bsi.Map-Share";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Map-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -304,6 +458,7 @@
 				EFA0E4571DEF5BE400488A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,0 +1,6 @@
+framework module Pods_Map_Share {
+  umbrella header "Pods-Map Share-umbrella.h"
+
+  export *
+  module * { export * }
+}

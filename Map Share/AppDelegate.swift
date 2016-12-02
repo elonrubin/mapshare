@@ -8,13 +8,41 @@
 
 import UIKit
 import CoreData
+import CoreLocation
+import RealmSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let realm = try! Realm()
+    lazy var places: Results<Place> = { self.realm.objects(Place.self)  }()
+    
+    // This handles deeplink
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        print(url.host!)
+        // handle the url
+        let urlHandle = url.host!
+        // 1 - split string into an array of strings
+        let urlArray = urlHandle.characters.split{$0 == ","}.map(String.init)
+        // 2 - create data from array
+        let lat = Double(urlArray[0])!
+        let long = Double(urlArray[1])!
+        let otherPersonTruncated = String(urlArray[2])!
+        let placename = String(urlArray[3])!
+        let otherPerson = otherPersonTruncated.replacingOccurrences(of: "+", with: " ", options: NSString.CompareOptions.literal)
+        // 3 - Reverse geocode with above data. This function also saves the share place
+        reverseGeocoding(latitude: lat, longitude: long, otherPerson: otherPerson, placename: placename)
+
+        
+        return true
+    }
 
 
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -38,14 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        if #available(iOS 10.0, *) {
+            self.saveContext()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     // MARK: - Core Data stack
 
+    @available(iOS 10.0, *)
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -75,6 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
+    @available(iOS 10.0, *)
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -88,6 +123,84 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    // This creates a CLPlacemark Object and then saves it (and associated data) to Realm
+    func reverseGeocoding(latitude: Double, longitude: Double, otherPerson: String, placename: String)  {
+        let lat = CLLocationDegrees(latitude)
+        let long = CLLocationDegrees(longitude)
+        let location = CLLocation(latitude: lat, longitude: long)
+        
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+            if error != nil {
+                print(error!)
+                return
+            }
+            else if (placemarks?.count)! > 0 {
+                let placemark = placemarks![0]
+                self.savePlace(placemark: placemark, otherPerson: otherPerson, lat: latitude, long: longitude, placename: placename)
+            }
+        })
+        
+    }
 
+    func savePlace (placemark: CLPlacemark, otherPerson: String, lat: Double, long: Double, placename: String) {
+        let idString = generateRandomNumber()
+        if places.filter("id == %@", idString).first == nil {
+            realm.beginWrite()
+            let place = Place()
+            if placemark.name != nil {
+                place.name = placemark.name!
+            } else {
+                
+            }
+            place.id = idString
+            place.name = placemark.name!
+            place.address = "\(placemark.subThoroughfare!) \(placemark.thoroughfare!), \(placemark.locality!), \(placemark.administrativeArea!) \(placemark.postalCode!)"
+            place.lat = lat
+            place.long = long
+            place.otherName = otherPerson
+            place.sent = false
+            place.createdDate = getCurrentDate().currentDate as NSDate
+            place.convertedDate = getCurrentDate().convertedDate
+            realm.add(place, update: true)
+            
+            do {
+                try realm.commitWrite()
+                print("commiting write")
+                self.goToMainScreen()
+            }
+            catch (let e)
+            {
+                print("Y U NO REALM ? \(e)")
+            }
+            
+            
+        } else {
+            savePlace(placemark: placemark, otherPerson: otherPerson, lat: lat, long: long, placename: placename)
+        }
+    }
+    
+    func generateRandomNumber () -> String {
+        let number: UInt32 =  1000000
+        let randomNumber = Int(arc4random_uniform(number))
+        
+        return String(randomNumber)
+    }
+    
+    func getCurrentDate () -> (currentDate:Date, convertedDate: String) {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.long
+        let convertedDate = dateFormatter.string(from: currentDate)
+        return (currentDate, convertedDate)
+    }
+    
+    func goToMainScreen () {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let startViewController = storyboard.instantiateViewController(withIdentifier: "navcontroller") as! UINavigationController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = startViewController;
+        self.window?.makeKeyAndVisible()
+        
+    }
 }
 
