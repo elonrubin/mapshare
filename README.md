@@ -8,7 +8,7 @@ Placeshare is a sample app created by Elon Rubin. It allows users to share place
 * This is compatible with iOS 9.0 and above
 
 
-# Main Screen
+## Main Screen
 * When you first open the app, I prompt the user to give their first and last name. I have a function that checks whether a bool was set for the user adding their name and it saving to NSUserDefaults. 
   * The main action is the Share New Place button on the bottom of the main screen. 
   * When you tap on this button, it segues to a place lookup controller. 
@@ -17,7 +17,8 @@ Placeshare is a sample app created by Elon Rubin. It allows users to share place
 * Enhancements
  * Add more sorting abilities 
  * I would probably subclass UITableViewCell and enhance the information presented on a cell and the layout of information
-# Place Lookup Controller
+
+## Place Lookup Controller
 * This is equiavalent to google’s autocomplete, it uses MapKit and a completion handler called MKLocalSearchRequest that conforms to the UISearchResultsUpdating protocol
 * Once a user taps on a place, it then directs to a ContectViewController. I save the MKPlacemark to a global variable within the controller, then pass that variable in PrepareForSegue method
 * Enhancements
@@ -27,7 +28,7 @@ Placeshare is a sample app created by Elon Rubin. It allows users to share place
 * Bug fix
  * If you do three or four searches, you have to tap cancel and tap on the Add Place Button again
   
-#Contact Lookup Controller
+##Contact Lookup Controller
 * It uses ContactsUI. You can either scroll down or search by name in the search bar above. When you tap, it brings up a UIActivityAlertViewController. You can share via message, email, Facebook and the other types of ActivityTypeDefaults
 * I didn't use the Apple view controller and functionality for displaying contacts. The reason is that customizing actions take a bit of work because Apple’s delegate methods are sometimes hard to follow and a bit buggy. I wanted the action of tapping on a contact, and then adding the UIActivityController subview. 
 * To enable deep linking, I point to the URL scheme created in the App Share target and add the longitude, latitude and the users name to the handle. When tapped on, the information is handled by a method in the AppDelegate file that corresponds to deep linking 
@@ -45,7 +46,7 @@ Placeshare is a sample app created by Elon Rubin. It allows users to share place
 * Bugs
  * When you tap on what to share, it clears the search bar and results to the default datasource 
     
-#Place Detail Controller
+##Place Detail Controller
 * If you tap on a tableviewcell on the main screen, it segues to the MapViewController. I pass a Place object - which is a subclass of NSObject, and Realm specific - to the map view
 * The mapview shows a pin with the name and address. A user can zoom in and can also use 3d features 
 * You press done to pop the view controller and go back to the main screen
